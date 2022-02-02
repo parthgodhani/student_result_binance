@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Student result</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"
+      integrity="sha512-C63V0mFzwl8KV2fRz0QJNKX0d9877urOLSUq5WUq8nUOhDl69hKdGr9mAvl57k47GNjqEMAtiufsvDnk7xs8+w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      main {
+        margin-top: 60px;
+      }
+
+      #content {
+        display: none;
+      }
+
+      form {
+        width: 350px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        margin-bottom: 0px;
+      }
+
+      #completedTaskList .content {
+        color: grey;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0"
+        >Binance | Student result List</a
+      >
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap d-none d-sm-none d-sm-block"></li>
+      </ul>
+    </nav>
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <small
+          >Account :- <a class="nav-link" href="#"><span id="account"></span></a
+        ></small>
+      </div>
+      <div class="row">
+        <main role="main" class="col-lg-12 d-flex justify-content-center">
+          <div id="loader" class="text-center">
+            <p class="text-center">Loading...</p>
+          </div>
+
+          <div id="content">
+            <form onSubmit="App.createTask(); return false;" id="newStudent">
+              <!-- <input
+                id="newTask"
+                type="text"
+                class="form-control"
+                placeholder="Add task..."
+                required
+              /> -->
+              <div class="row m-1">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Student name</label>
+                    <input
+                      type="text"
+                      id="studentName"
+                      class="form-control"
+                      placeholder="Add student name..."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- subject 1 -->
+              <div class="row m-1">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 1</label>
+                    <input
+                      type="text"
+                      id="subject1Name"
+                      class="form-control"
+                      placeholder="Add Subject name..."
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 1 marks</label>
+                    <input
+                      type="text"
+                      id="subject1Mark"
+                      class="form-control"
+                      placeholder="Add Subject name..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <!-- subject 2 -->
+              <div class="row m-1">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 2</label>
+                    <input
+                      type="text"
+                      id="subject2Name"
+                      class="form-control"
+                      placeholder="Add Subject name..."
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 2 marks</label>
+                    <input
+                      type="text"
+                      id="subject2Mark"
+                      class="form-control"
+                      placeholder="Add Subject marks..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <!-- subject 3 -->
+              <div class="row m-1">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 3</label>
+                    <input
+                      type="text"
+                      id="subject3Name"
+                      class="form-control"
+                      placeholder="Add Subject name..."
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 3 marks</label>
+                    <input
+                      type="text"
+                      id="subject3Mark"
+                      class="form-control"
+                      placeholder="Add Subject marks..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <!-- subject 4 -->
+              <div class="row m-1">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 4</label>
+                    <input
+                      type="text"
+                      id="subject4Name"
+                      class="form-control"
+                      placeholder="Add Subject name..."
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 4 marks</label>
+                    <input
+                      type="text"
+                      id="subject4Mark"
+                      class="form-control"
+                      placeholder="Add Subject mark..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <!-- subject 5 -->
+              <div class="row m-1">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 5</label>
+                    <input
+                      type="text"
+                      id="subject5Name"
+                      class="form-control"
+                      placeholder="Add Subject name..."
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subject 5 marks</label>
+                    <input
+                      type="text"
+                      id="subject5Mark"
+                      class="form-control"
+                      placeholder="Add Subject mark..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="row m-1">
+                <div class="col text-center">
+                  <input type="submit" class="btn btn-success" />
+                </div>
+              </div>
+            </form>
+            <div class="div" id="students">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Subject1</th>
+                        <th scope="col">Subject2</th>
+                        <th scope="col">Subject3</th>
+                        <th scope="col">Subject4</th>
+                        <th scope="col">Subject5</th>
+                        <th scope="col">total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
