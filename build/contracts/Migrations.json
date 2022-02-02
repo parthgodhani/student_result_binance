@@ -671,7 +671,7 @@
   "sourceMap": "66:352:0:-:0;;;90:33;;;-1:-1:-1;;;;;;90:33:0;113:10;90:33;;;66:352;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "66:352:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;;;;;;;160:25:2;;;148:2;133:18;127:36:0;;;;;;;;90:33;;;;;-1:-1:-1;;;;;90:33:0;;;;;;-1:-1:-1;;;;;360:32:2;;;342:51;;330:2;315:18;90:33:0;196:203:2;313:103:0;;;;;;:::i;:::-;;:::i;:::-;;;225:5;;-1:-1:-1;;;;;225:5:0;211:10;:19;196:101;;;;-1:-1:-1;;;196:101:0;;791:2:2;196:101:0;;;773:21:2;830:2;810:18;;;803:30;869:34;849:18;;;842:62;-1:-1:-1;;;920:18:2;;;913:49;979:19;;196:101:0;;;;;;;;375:24:::1;:36:::0;313:103::o;404:180:2:-;463:6;516:2;504:9;495:7;491:23;487:32;484:52;;;532:1;529;522:12;484:52;-1:-1:-1;555:23:2;;404:180;-1:-1:-1;404:180:2:o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/home/par/projects/binance-student-result/contracts/Migrations.sol",
+  "sourcePath": "/Users/par1/projects/student_result_binance/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1471,15 +1471,15 @@
     "version": "0.8.11+commit.d7f03943.Emscripten.clang"
   },
   "networks": {
-    "56": {
+    "97": {
       "events": {},
       "links": {},
-      "address": "0x447EC3CbfD7A997a481c47F97692fB122E877EEE",
-      "transactionHash": "0x2385572547ea86ae1f985edbc8ea606ae2ba15bae812e67dc9bf53ced3591887"
+      "address": "0xA74a6e6D4A58828D70f9807d72f020E860A04b73",
+      "transactionHash": "0x431a5daf6b24d73e6a895f5feee2cd5ad93ba86918afcb14202310dba373ad91"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-02-02T11:21:00.285Z",
+  "updatedAt": "2022-02-02T16:10:32.540Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

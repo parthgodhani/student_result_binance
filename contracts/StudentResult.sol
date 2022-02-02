@@ -36,21 +36,21 @@ contract StudentResult {
 
     mapping(uint256 => Student) public students;
 
-    // constructor() {
-    //     createStudent(
-    //         "Parth",
-    //         "Mathematiche",
-    //         75,
-    //         "Physics",
-    //         75,
-    //         "Chemistry",
-    //         56,
-    //         "Calculus",
-    //         90,
-    //         "neuroscience",
-    //         38
-    //     );
-    // }
+    constructor() {
+        createStudent(
+            "Parth",
+            "Mathematiche",
+            75,
+            "Physics",
+            75,
+            "Chemistry",
+            56,
+            "Calculus",
+            90,
+            "neuroscience",
+            38
+        );
+    }
 
     function createStudent(
         string memory _name,
