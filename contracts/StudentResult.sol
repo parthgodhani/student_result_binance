@@ -19,20 +19,20 @@ contract StudentResult {
         int256 subject5Marks;
     }
 
-    event StudentCreated(
-        uint256 id,
-        string name,
-        string subject1,
-        int256 subject1Marks,
-        string subject2,
-        int256 subject2Marks,
-        string subject3,
-        int256 subject3Marks,
-        string subject4,
-        int256 subject4Marks,
-        string subject5,
-        int256 subject5Marks
-    );
+    // event StudentCreated(
+    //     uint256 id,
+    //     string name,
+    //     string subject1,
+    //     int256 subject1Marks,
+    //     string subject2,
+    //     int256 subject2Marks,
+    //     string subject3,
+    //     int256 subject3Marks,
+    //     string subject4,
+    //     int256 subject4Marks,
+    //     string subject5,
+    //     int256 subject5Marks
+    // );
 
     mapping(uint256 => Student) public students;
 
@@ -82,20 +82,20 @@ contract StudentResult {
             subject5Marks
         );
 
-        emit StudentCreated(
-            studentCount,
-            _name,
-            subject1,
-            subject1Marks,
-            subject2,
-            subject2Marks,
-            subject3,
-            subject3Marks,
-            subject4,
-            subject4Marks,
-            subject5,
-            subject5Marks
-        );
+        // emit StudentCreated(
+        //     studentCount,
+        //     _name,
+        //     subject1,
+        //     subject1Marks,
+        //     subject2,
+        //     subject2Marks,
+        //     subject3,
+        //     subject3Marks,
+        //     subject4,
+        //     subject4Marks,
+        //     subject5,
+        //     subject5Marks
+        // );
     }
 }
 // GQCgtd@6421*

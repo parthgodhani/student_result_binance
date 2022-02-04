@@ -176,11 +176,11 @@ App = {
       `;
       studentsData.push(studentJson);
     }
+    console.log(html);
     $("#tableBody").html(html);
   },
 
   createStudent: async () => {
-    App.setLoading(true);
     const studentName = $("#studentName").val();
     const subject1Name = $("#subject1Name").val();
     const subject1Mark = $("#subject1Mark").val();
@@ -192,7 +192,8 @@ App = {
     const subject4Mark = $("#subject4Mark").val();
     const subject5Name = $("#subject5Name").val();
     const subject5Mark = $("#subject5Mark").val();
-    await App.todoList.createTask(
+    console.log(studentName);
+    await App.StudentResult.createStudent(
       studentName,
       subject1Name,
       subject1Mark,
@@ -203,7 +204,7 @@ App = {
       subject4Name,
       subject4Mark,
       subject5Name,
-      subject5Mark
+      subject5Mark,{from:App.account}
     );
     window.location.reload();
   },
